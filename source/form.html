@@ -8,76 +8,89 @@
 
 <body>
   <header class="page-header">
-    <span class="page-header__logo">
+    <a href="index.html" class="page-header__logo">
       <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Магазин игрушек Мишка">
-      <span>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="site-list__item site-list__active">
-                <a href="form.html">Вязание на заказ</a>
-              </li>
-              <li class="site-list__item site-list__item">
-                <a href="#">Новые поступления</a>
-              </li>
-              <li class="site-list__item">
-                <a href="#">Распродажа</a>
-              </li>
-            </ul>
-            <button class="main-nav__search" type="button">Поиск по сайту</button>
-            <ul class="main-nav__list bin-list">
-              <li class="bin-list__item">
-                <a class="bin-list__open-bin" href="#">Корзина: пока пуста</a>
-              </li>
-            </ul>
-            <p class="main-nav__delivery">Бесплатная доставка по России</p>
-          </div>
-        </nav>
+    </a>
+    <button class="main-nav-toggle" type="button">Открыть меню</button>
+    <nav class="main-nav">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-list__item site-list__active">
+          <a href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="site-list__item site-list__item">
+          <a href="#">Новые поступления</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#">Распродажа</a>
+        </li>
+      </ul>
+      <a href="#" class="main-nav__search">Поиск по сайту</a>
+      <ul class="main-nav__list bin-list">
+        <li class="bin-list__item">
+          <a class="bin-list__open-bin" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <p class="main-nav__delivery">Бесплатная доставка по России</p>
+    </nav>
   </header>
   <main class="page-main">
+    <h1 class="visually-hidden">Милые штуки ручной работы для дома. Форма оформления заказа</h1>
     <section class="form">
-      <h2 class="form__title">Вязание на заказ</h2>
+      <h2 class="main-title main-title--form">Вязание на заказ</h2>
       <p class="form__title-explain">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.</p>
       <form class="form__order-form">
-        <fieldset class="form__section form__section--type">
-          <legend class="form__section-name">Тип</legend>
-          <label class="form__section-option">Аксессуар для интерьера
-            <input class="form__section-option-radio" type="radio" checked>
-          </label>
-          <label class="fform__section-option">Детская игрушка
-            <input class="form__section-option-radio" type="radio">
-          </label>
+        <fieldset class="form__section">
+        <lagend class="form__section-name">Тип</lagend>
+          <ul class="form__section-option-list form__section-option-list--radio">
+            <li class="form__list-item form__list-item--radio">
+                <input class="form__section-option-radio" id="home-decor" type="radio" checked>
+                <label class="form__section-option" for="home-decor">Аксессуар для интерьера</label>
+            </li>
+            <li class="form__list-item form__list-item--radio">
+                <input class="form__section-option-radio" id="toys" type="radio">
+                <label class="form__section-option" for="toys">Детская игрушка</label>
+            </li>
+          </ul>
         </fieldset>
+        <fieldset class="form__section">
+          <lagend class="form__section-name">Цвет</lagend>
+          <ul class="form__section-option-list form__section-option-list--checkbox">
+            <li class="form__list-item form__list-item--checkbox">
+                <input class="form__section-option-checkbox" id="white" type="checkbox" checked>
+                <label class="form__section-option" for="white">Белый</label>
+            </li>
+            <li class="form__list-item form__list-item--checkbox">
 
-        <fieldset class="form__section form__section--color">
-          <legend class="form__section-name">Цвет</legend>
-          <label class="form__section-option">Белый
-            <input class="form__section-option-checkbox" type="checkbox" checked>
-          </label>
-          <label class="form__section-option">Серый
-            <input class="form__section-option-checkbox" type="checkbox" checked>
-          </label>
-          <label class="form__section-option">«Тиффани»
-            <input class="form__section-option-checkbox" type="checkbox">
-          </label>
-          <label class="form__section-option">Черный
-            <input class="form__section-option-checkbox" type="checkbox">
-          </label>
-          <label class="form__filter-option">Розовый
-            <input class="form__section-option-checkbox" type="checkbox">
-          </label>
-          <label class="form__filter-option">Оранжевый
-            <input class="form__section-option-checkbox" type="checkbox">
-          </label>
+                <input class="form__section-option-checkbox" id="grey" type="checkbox" checked>
+                <label class="form__section-option" for="grey">Серый</label>
+            </li>
+            <li class="form__list-item form__list-item--checkbox">
+                <input class="form__section-option-checkbox" id="tiffanie" type="checkbox">
+                <label class="form__section-option" for="tiffanie">«Тиффани»</label>
+            </li>
+            <li class="form__list-item form__list-item--checkbox">
+
+                <input class="form__section-option-checkbox" id="black" type="checkbox">
+                <label class="form__section-option" for="black">Черный</label>
+            </li>
+            <li class="form__list-item form__list-item--checkbox">
+
+                <input class="form__section-option-checkbox" id="pink" type="checkbox">
+                <label class="form__filter-option" for="pink">Розовый</label>
+            </li>
+            <li class="form__list-item form__list-item--checkbox">
+
+                <input class="form__section-option-checkbox" type="checkbox" id="orange">
+                <label class="form__filter-option" for="orange">Оранжевый</label>
+            </li>
+          </ul>
         </fieldset>
-
-        <fieldset class="form__section form__section--user-info">
-          <legend class="form__section-name">ФИО</legend>
+        <fieldset class="form__section">
+        <lagend class="form__section-name">ФИО</lagend>
           <label class="form__user-name">Имя:
             <input class="form__input-user-name" type="text" placeholder="Введите ваше имя*" required>
           </label>
@@ -89,7 +102,7 @@
           </label>
         </fieldset>
         <label class="form__section-name">Тел
-          <input class="form__input-contact-info" type="text" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+          <input class="form__input-contact-info" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
         </label>
         <label class="form__section-name">E-mail
           <input class="form__input-contact-info" type="email" placeholder="Ваш Email*" required>
@@ -97,27 +110,34 @@
         <label class="form__section-name">Доп
           <textarea class="form__add-note" name="order-add-note">Опишите все ваши пожелания к заказу</textarea>
         </label>
-        <input class="form__submit" type="submit" value="Отправить заказ">
+        <small class="form__reminder">*Поля обязательны для заполнения</small>
+        <button class="form__submit" type="submit" value="Отправить заказ"></button>
       </form>
-      <small class="form__reminder">*Поля обязательны для заполнения</small>
     </section>
   </main>
   <footer class="page-footer">
-    <span class="page-footer__logo">
+    <a href="#" class="page-footer__logo">
       <img class="page-footer__logo-image" src="https://via.placeholder.com/150x150" alt="Магазин игрушек Мишка">
-      <span>
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Instagram</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://vk.com/htmlacademy">Facebook</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://vk.com/htmlacademy">Twitter</a>
-            </li>
-            <div class="page-footer__copyright">
-              <b class="copyright__text">Разработано:</b>
-              <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </a>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#" target="_blank">Instagram</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://vk.com/htmlacademy" target="_blank">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://vk.com/htmlacademy" target="_blank">Twitter</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright">
+      <b class="page-footer__copyright-text">Разработано:</b>
+      <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"
+        target="_blank">HTML Academy</a>
+    </div>
   </footer>
+</body>
+
+</html>
